@@ -12,5 +12,26 @@
   </head>
   <body>
     <div id="myFirstListDisplayer"></div>
+
+    <script>
+      //let's build a nice little object to store all of our settings
+      var settings = {
+        service: {
+          root: 'http://www.flymine.org/flymine/service/'
+          //can optionally include a token if you have one, e.g. token: myToken
+        },
+        query : {
+          value : 'PL FlyAtlas_brain_top'
+        },
+        //note that we're passing a reference to the element, rather than
+        //passing the ID. You could also use document.querySelector to fetch your
+        //chosen element.
+        parentElem : document.getElementById('myFirstListDisplayer')
+      };
+
+      //now we invoke the list displayer, passing it the arguments it needs.
+      listDisplayer(settings);
+    </script>
+
   </body>
 </html>
